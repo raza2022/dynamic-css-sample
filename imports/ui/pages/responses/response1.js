@@ -59,25 +59,38 @@ function addDynamicCSS (questions) {
                         border: 1px solid;
                         border-radius: 50px;
                         padding: 7px;
+                        }
+                        .escala label[for=escala${index}${elementId}]::after {
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0;
+                        transition: 0.5s;
+                        content: '${index}';
+                        width: 40px;
+                        border: 1px solid #44987b;
+                        border-radius: 50px;
+                        padding: 7px;
+                        background-color: rgb(68 152 123 / 17%);
+                        color: #44987b;
                         }`
             }
         }
     }
-    console.log('dynamicCss called with questions', questions)
     if (questions.length) {
+        let styleTag = document.createElement("style");
         questions.forEach(question => {
             console.log(question)
             if (question.type === 'scales') {
                 for (let i = 1; i <= CSSObject.scales.limit; i++) {
                     let cssTemplateString = CSSObject.scales.css(question._id, i)
-                    const styleTag = document.createElement("style");
-                    styleTag.innerHTML = cssTemplateString;
-                    console.log(styleTag)
-                    document.head.insertAdjacentElement('beforeend', styleTag);
+
+                    styleTag.innerHTML += cssTemplateString;
                 }
             }
         //    else other types goes here
         })
+        console.log(styleTag)
+        document.head.insertAdjacentElement('beforeend', styleTag);
     }
 }
 

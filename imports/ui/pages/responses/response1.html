@@ -4,10 +4,30 @@
         <div class="widget-shadow">
             <div class="login-top">
                 <hr>
-                {{#each question in questions}}
-
-                    {{> responseStep2 questionConfig question @index }}
-
+                {{#each questions}}
+                <p class="textCuest1">
+                    {{options.question}}?
+                    {{#if options.required}}*{{/if}}
+                </p>
+                <br>
+                <div class="selecOpc3">
+                    <div class="dRati" id="scale">
+                        <div class="escala">
+                            <input type="radio" name="escala" id="escala10{{_id}}" value="10"><label for="escala10{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala9{{_id}}" value="9"><label for="escala9{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala8{{_id}}" value="8"><label for="escala8{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala7{{_id}}" value="7"><label for="escala7{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala6{{_id}}" value="6"><label for="escala6{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala5{{_id}}" value="5"><label for="escala5{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala4{{_id}}" value="4"><label for="escala4{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala3{{_id}}" value="3"><label for="escala3{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala2{{_id}}" value="2"><label for="escala2{{_id}}"></label>
+                            <input type="radio" name="escala" id="escala1{{_id}}" value="1"><label for="escala1{{_id}}"></label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr>
                 {{/each}}
             </div>
         </div>
