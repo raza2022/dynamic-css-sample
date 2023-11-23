@@ -1,0 +1,337 @@
+h4, h5, h6,
+h1, h2, h3 {margin: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+
+html, body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 100%;
+    overflow-x: hidden;
+    background: #FFFFFF;
+}
+
+#page-wrapper3 .widget-shadow {
+    background-color: #fff;
+    box-shadow: 0 -1px 3px rgba(0,0,0,0),0 1px 2px rgba(0,0,0,0);
+    -webkit-box-shadow: 0 -1px 3px rgba(0,0,0,0),0 1px 2px rgba(0,0,0,0);
+    -moz-box-shadow: 0 -1px 3px rgba(0,0,0,0),0 1px 2px rgba(0,0,0,0);
+}
+#page-wrapper3 .login-top {
+    padding: 1.5em;
+    border-bottom: 0 solid #DED9D9!important;
+    text-align: center;
+}
+
+#wrapper {
+    width: 100%;
+}
+#page-wrapper {
+    padding:7em 2em 2.5em 12em;
+	background-color: #EFF4FA;
+}
+#page-wrapper2 {
+    padding:7em 2em 2.5em 2em;
+	background-color: #EFF4FA;
+}
+#page-wrapper3 {
+    padding:4em 2em 2.5em 2em;
+	background-color: #FFFFFF;
+}
+
+#page-wrapper3 .login-page{
+    width: 70%!important;
+}
+
+.selecOpc3{
+	width: 100%;
+    display: block;
+    margin: 10px 40px 40px;
+}
+
+.selecOpc3 div{
+	display: flex;
+    justify-content: space-between;
+	width: 100%;
+}
+
+.selecOpc3 .dRati{
+	display: inline-block;
+	position: relative;
+}
+
+.selecOpc3 .dRati .escala{
+	display: grid;
+    grid-template-columns: auto auto auto auto auto;
+	margin: 25px auto;
+}
+
+.selecOpc3 img{
+	width: 35px;
+}
+
+
+.textCuest1{
+	margin: 10px 0px 0px;
+	text-align: left;
+}
+
+.rating, .rating1, .escala {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  display: flex;
+  justify-content: space-around;
+}
+
+.rating input, .rating1 input, .escala input {
+  display: none;
+}
+
+
+.escala label {
+    display: inline-grid;
+    cursor: pointer;
+    width: 40px;
+    transform: rotate(180deg);
+    margin: 5px;
+}
+
+
+/* here is the issue which I had to resolve dynamically */
+.escala label[for=escala1]::before {
+  content: '1';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala2]::before {
+  content: '2';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala3]::before {
+  content: '3';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala4]::before {
+  content: '4';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala5]::before {
+  content: '5';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala6]::before {
+  content: '6';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala7]::before {
+  content: '7';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala8]::before {
+  content: '8';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala9]::before {
+  content: '9';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala10]::before {
+  content: '10';
+  position: relative;
+  display: block;
+  border: 1px solid;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.escala label[for=escala1]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '1';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala2]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '2';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala3]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '3';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala4]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '4';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala5]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '5';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala6]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '6';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala7]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '7';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala8]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '8';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala9]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '9';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+.escala label[for=escala10]::after {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+  content: '10';
+	width: 40px;
+	border: 1px solid #44987b;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: rgb(68 152 123 / 17%);
+    color: #44987b;
+}
+
+
+.escala label:hover::after,
+.escala label:hover ~ label::after,
+.escala input:checked ~ label::after {
+  opacity: 1;
+}

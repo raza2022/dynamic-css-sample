@@ -1,0 +1,16 @@
+<template name="response">
+
+    <div class="main-page login-page ">
+        <div class="widget-shadow">
+            <div class="login-top">
+                <hr>
+                {{#each question in questions}}
+
+                    {{> responseStep2 questionConfig question @index }}
+
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,43 @@
+<!--// all possible response type listed here for dynamic templating-->
+
+<!--***** ISSUE TEMPLATE START ****-->
+<template name="scalesResponse">
+    <p class="textCuest1">
+        {{options.question}}?
+        {{#if options.required}}*{{/if}}
+    </p>
+    <br>
+    <div class="selecOpc3">
+        <div class="dRati" id="scale">
+            <div class="escala">
+                <input type="radio" name="escala" id="escala10" value="10"><label for="escala10"></label>
+                <input type="radio" name="escala" id="escala9" value="9"><label for="escala9"></label>
+                <input type="radio" name="escala" id="escala8" value="8"><label for="escala8"></label>
+                <input type="radio" name="escala" id="escala7" value="7"><label for="escala7"></label>
+                <input type="radio" name="escala" id="escala6" value="6"><label for="escala6"></label>
+                <input type="radio" name="escala" id="escala5" value="5"><label for="escala5"></label>
+                <input type="radio" name="escala" id="escala4" value="4"><label for="escala4"></label>
+                <input type="radio" name="escala" id="escala3" value="3"><label for="escala3"></label>
+                <input type="radio" name="escala" id="escala2" value="2"><label for="escala2"></label>
+                <input type="radio" name="escala" id="escala1" value="1"><label for="escala1"></label>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+</template>
+
+<!--***** ISSUE TEMPLATE END ****-->
+
+
+<template name="responseStep2">
+    {{> Template.dynamic template=templateName data=data}}
+</template>
+
+
+
+<!--below code is sample for future types&ndash;&gt;-->
+<template name="smiliesResponse"></template>
+
+
+<template name="starsResponse"></template>
