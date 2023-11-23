@@ -20,7 +20,7 @@ let Questions = [
 ];
 
 Template.response1.onRendered(function () {
-
+    addDynamicCSS(Questions)
 })
 
 Template.response1.helpers({
@@ -45,6 +45,42 @@ Template.response1.events({
         // DB update goes here
     },
 });
+
+//hacky solution???
+function addDynamicCSS (questions) {
+    let CSSObject = {
+        scales: {
+            limit: 10,
+            css: function (elementId, index) {
+                return `.escala label[for=escala${index}${elementId}]::before {
+                        content: '${index}';
+                        position: relative;
+                        display: block;
+                        border: 1px solid;
+                        border-radius: 50px;
+                        padding: 7px;
+                        }`
+            }
+        }
+    }
+    console.log('dynamicCss called with questions', questions)
+    if (questions.length) {
+        questions.forEach(question => {
+            console.log(question)
+            if (question.type === 'scales') {
+                for (let i = 1; i <= CSSObject.scales.limit; i++) {
+                    let cssTemplateString = CSSObject.scales.css(question._id, i)
+                    const styleTag = document.createElement("style");
+                    styleTag.innerHTML = cssTemplateString;
+                    console.log(styleTag)
+                    document.head.insertAdjacentElement('beforeend', styleTag);
+                }
+            }
+        //    else other types goes here
+        })
+    }
+}
+
 
 
 
